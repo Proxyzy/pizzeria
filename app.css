@@ -1,0 +1,175 @@
+body {
+  font-family: 'lato', sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+li {
+  border-radius: 3px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.table-header {
+  background-color: #F04120;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 5px;
+}
+
+.item-ordering {
+  background-color: #FFD833;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 3px;
+}
+
+.table-row {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.col-1 {
+  flex-basis: 15%;
+}
+
+.col-2 {
+  flex-basis: 5%;
+}
+
+.col-3 {
+  flex-basis: 30%;
+}
+
+.col-4 {
+  flex-basis: 10%;
+}
+
+.col-5 {
+  flex-basis: 10%;
+}
+
+@media all and (max-width: 767px) {
+  .table-header {
+    display: none;
+  }
+  .table-row {}
+  li {
+    display: block;
+  }
+  .col {
+    flex-basis: 100%;
+  }
+  .col {
+    display: flex;
+    padding: 10px 0;
+    color: #6C7A89;
+    padding-right: 10px;
+    content: attr(data-label);
+    flex-basis: 50%;
+    text-align: right;
+  }
+}
+
+img {
+  width: 20px;
+  height: 20px;
+}
+
+.pizza-img {
+  width: 40px;
+  height: 40px;
+}
+
+button {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn {
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 13px 20px;
+  border-radius: 4px;
+  transition: box-shadow 0.1s, top 0.1s;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.3);
+  top: 0;
+  background: #fff;
+  
+}
+
+.btn:hover {
+  box-shadow: 0 3px 0 transparent;
+  top: 3px;
+}
+
+.btn:active {
+  background: #f2f2f2;
+}
+
+.modal {
+  pointer-events: none;
+  opacity: 0;
+  text-align:center;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-item{
+  margin-top: 10px;
+  padding-top:10px
+}
+
+.modal-close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+}
+
+.overlay {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}

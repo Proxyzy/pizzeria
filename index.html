@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="app.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- The Modal -->
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="modal">
+      <button class="modal-close-btn" id="close-btn">X</button>
+      <form id="pizzaForm" onsubmit="" name="pizzaForm">
+        <label for="pname" class="modal-item">Pizza name:</label><br>
+        <input type="text" required maxlength="30" id="pname" name="pname" placeholder="Enter here"><br>
+        <label for="price" class="modal-item">Pizza price:</label><br>
+        <input type="number" required min="0" step=".01" id="price" name="price" placeholder="Enter here"><br>
+        <label for="heat" class="modal-item">Pizza heat:</label><br>
+        <input type="checkbox" id="heatcheck"><input type="number" min="1" step="1" max="3" id="heat" disabled
+          name="heat" placeholder="Enter here"><br>
+        <label for="toppings" class="modal-item">Pizza toppings(Seperate with , ):</label><br>
+        <input type="text" required id="toppings" name="toppings" placeholder="Enter here"><br>
+        <label for="photo" class="modal-item">Pizza photo:</label><br>
+        <div>
+          <input type="radio" name="imagerad" value="none" checked>
+          <label for="none">No image</label>
+        </div>
+        <div>
+          <input type="radio" name="imagerad" value="photo\Capricciosa-Ham-Artichoke-Mushrooms-Olives_7.jpg">
+          <label for="huey"></label><img src="photo\Capricciosa-Ham-Artichoke-Mushrooms-Olives_7.jpg"
+            alt="Capricciosa-Ham-Artichoke-Mushrooms-Olives">
+          <input type="radio" name="imagerad" value="photo\Ham-and-Pineapple.jpg">
+          <img src="photo\Ham-and-Pineapple.jpg" alt="Ham-and-Pineapple">
+          <input type="radio" name="imagerad" value="photo\Margherita-pizza.jpg">
+          <img src="photo\Margherita-pizza.jpg" alt="Margherita-pizza">
+        </div>
+        <div>
+          <input type="radio" name="imagerad" value="photo\Meatlovers.jpg">
+          <label for="huey"></label><img src="photo\Meatlovers.jpg" alt="Meatlovers">
+          <input type="radio" name="imagerad" value="photo\Pepperoni-Pizza.jpg">
+          <img src="photo\Pepperoni-Pizza.jpg" alt="Pepperoni-Pizza">
+          <input type="radio" name="imagerad" value="photo\Prawn-Pizza.jpg">
+          <img src="photo\Prawn-Pizza.jpg" alt="Prawn-Pizza">
+        </div>
+        <div>
+          <input type="radio" name="imagerad" value="photo\Quattro-Formaggio-Four-Cheese-Pizza.jpg">
+          <img src="photo\Quattro-Formaggio-Four-Cheese-Pizza.jpg" alt="Quattro-Formaggio-Four-Cheese-Pizza">
+          <input type="radio" name="imagerad" value="photo\Sausage-and-kale-pizza.jpg">
+          <img src="photo\Sausage-and-kale-pizza.jpg" alt="Sausage-and-kale-pizza">
+          <input type="radio" name="imagerad" value="photo\Supreme-Pizza.jpg">
+          <img src="photo\Supreme-Pizza.jpg" alt="Supreme-Pizza">
+        </div>
+        <input type="submit" id="formButton" value="Nothing here">
+      </form>
+    </div>
+
+
+
+
+
+
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">Pizza Name</div>
+        <div class="col col-2">Price</div>
+        <div class="col col-3">Toppings</div>
+        <div class="col col-4">Photo</div>
+        <div class="col col-5">Delete</div>
+      </li>
+      <li class="item-ordering">
+        <div class="col" >Order By:</div>
+        <div class="col" id="nameHead">Name</div>
+        <div class="col" id="priceHead">Price</div>
+        <div class="col" id="heatHead">Heat</div>
+      </li>
+    </ul>
+    <ul id="list" class="responsive-table">
+    </ul>
+    <div style="text-align:center;"><button class="btn" id="btn-modal">Add New Pizza</button></div>
+    
+
+  </div>
+
+  </div>
+</body>
+<script src="app.js"></script>
+
+</html>
